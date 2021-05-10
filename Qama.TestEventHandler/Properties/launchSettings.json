@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Qama.TestEventHandler": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

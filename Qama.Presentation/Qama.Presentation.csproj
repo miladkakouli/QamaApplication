@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Qama.Framework.Application.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Qama.Framework.Core.Logging.MicrosoftLogger" Version="1.0.0" />
+    <PackageReference Include="Qama.Framework.Core.MicrosoftServiceLocator" Version="1.0.0" />
+    <PackageReference Include="Qama.Framework.Extensions.Microsoft.DependencyInjection.MicrosoftSettingProvider" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qama.Commands\Qama.Commands.csproj" />
+    <ProjectReference Include="..\Qama.Events\Qama.Events.csproj" />
+    <ProjectReference Include="..\Qama.Persistence\Qama.Persistence.csproj" />
+    <ProjectReference Include="..\Qama.Queries\Qama.Queries.csproj" />
+    <ProjectReference Include="..\Qama.Validators\Qama.Validators.csproj" />
+  </ItemGroup>
+
+</Project>

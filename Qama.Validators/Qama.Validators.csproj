@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.5.1" />
+    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.1.7" />
+    <PackageReference Include="Qama.Framework.Extensions.Validations" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qama.Commands\Qama.Commands.csproj" />
+    <ProjectReference Include="..\Qama.Queries\Qama.Queries.csproj" />
+  </ItemGroup>
+
+</Project>
