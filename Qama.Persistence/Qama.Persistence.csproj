@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.1.7" />
-    <PackageReference Include="Qama.Framework.Core.Persistence.NHibernate" Version="1.0.0" />
+    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.2.6" />
+    <PackageReference Include="Qama.Framework.Core.Persistence.NHibernate" Version="1.0.8" />
     <PackageReference Include="Qama.Framework.Extensions.Microsoft.DependencyInjection" Version="1.0.4" />
     <PackageReference Include="Qama.Framework.Extensions.Microsoft.DependencyInjection.Persistence.NHibernate" Version="1.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>

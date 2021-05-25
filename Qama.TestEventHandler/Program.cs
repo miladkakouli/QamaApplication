@@ -21,12 +21,6 @@ namespace Qama.TestEventHandler
         static void Main(string[] args)
         {
             var services = new ServiceCollection();
-            Events.Startup.WireUp(services);
-            services.AddServiceLocator<MicrosoftServiceLocator>();
-            services.AddLogging();
-
-            services.AddRabbitMQEventHandler<TestEvent, Events.EventHandlers.TestEventHandler>();
-
             string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
             var builder = new ConfigurationBuilder()
@@ -42,16 +36,21 @@ namespace Qama.TestEventHandler
                         optional: true
                     );
             }
-            else
+            else if (!string.IsNullOrEmpty(environment))
             {
                 builder
                     .AddJsonFile($"appsettings.{environment}.json", optional: false);
             }
 
             var Configuration = builder.Build();
-
             services.AddMicrosoftSettingProvider<DbConnectionString>("ConnectionStrings", Configuration);
             services.AddMicrosoftSettingProvider<RabbitMQSettings>("RabbitMQSettings", Configuration);
+
+            Events.Startup.WireUp(services);
+            Persistence.Startup.WireUp(services);
+            services.AddServiceLocator<MicrosoftServiceLocator>();
+            services.AddLogging();
+            services.AddRabbitMQEventHandler<TestEvent, TestEventHandler>();
 
             services.AddLogger<MicrosoftLogger>();
             services.AddSingleton<TestEventWorker>();
@@ -62,7 +61,13 @@ namespace Qama.TestEventHandler
             {
                 x.Service<TestEventWorker>(s =>
                 {
-                    s.ConstructUsing(sf => sp.GetService<TestEventWorker>());
+                    s.ConstructUsing(sf =>
+                    {
+                        using (var scope = sp.CreateScope())
+                        {
+                            return scope.ServiceProvider.GetService<TestEventWorker>();
+                        }
+                    });
                     s.WhenStarted(tc =>
                     {
                         tc.Start();

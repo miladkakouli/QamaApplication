@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.78" />
-    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.1.7" />
+    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.2.6" />
     <PackageReference Include="Qama.Framework.Core.QueryBus.InMemory" Version="1.0.2" />
     <PackageReference Include="Qama.Framework.Extensions.Microsoft.DependencyInjection" Version="1.0.4" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />

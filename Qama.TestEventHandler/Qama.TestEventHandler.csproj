@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Qama.Events\Qama.Events.csproj" />
+    <ProjectReference Include="..\Qama.Persistence\Qama.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

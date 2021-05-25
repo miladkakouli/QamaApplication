@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Qama.Events.EventHandlers;
 using Qama.Events.Events;
 using Qama.Framework.Core.Abstractions.Events;
 using Qama.Framework.Core.Abstractions.Persistence;

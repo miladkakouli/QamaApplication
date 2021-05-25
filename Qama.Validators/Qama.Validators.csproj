@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="9.5.1" />
-    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.1.7" />
-    <PackageReference Include="Qama.Framework.Extensions.Validations" Version="1.0.0" />
+    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.2.6" />
+    <PackageReference Include="Qama.Framework.Extensions.Validations" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

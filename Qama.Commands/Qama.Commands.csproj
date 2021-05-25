@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.1.7" />
+    <PackageReference Include="Qama.Framework.Core.Abstractions" Version="1.2.6" />
     <PackageReference Include="Qama.Framework.Core.CommandBus.InMemory" Version="1.0.2" />
     <PackageReference Include="Qama.Framework.Extensions.Microsoft.DependencyInjection" Version="1.0.4" />
   </ItemGroup>
